@@ -42,3 +42,33 @@ int main()
 
 }
 ```
+## 4
+```C
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    if(n>90||n==90) printf("A");
+    else if(n<90&&n>80||n==80) printf("B");
+    else if(n<80&&n>60||n==60) printf("C");
+    else printf("F");
+
+}
+```
+## 5
+```C
+#include <stdio.h>
+int main()
+{
+    int n, m, a=0;
+    scanf("%d%d", &n, &m);
+    for(int i=1; i<=n; i++){
+        if(n%i==0&&m%i==0){
+            i=a;
+        }
+    }
+    printf("%d %d\n", n/a, m/a);
+}
+
+```
