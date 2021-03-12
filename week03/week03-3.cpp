@@ -13,17 +13,17 @@ int main()
     int *p= &a[2];
     *p=222;
     printfAll();
-    printf("�ýX:%d\n", p);
+    printf("¶Ã½X:%d\n", p);
 
     p=p+2;
     *p=666;
     printfAll();
-    printf("�ýX:%d\n", p);
+    printf("¶Ã½X:%d\n", p);
 
     p--;
     *p=555;
     printfAll();
-    printf("�ýX:%d\n", p);
+    printf("¶Ã½X:%d\n", p);
 
 
 }
