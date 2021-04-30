@@ -19,7 +19,7 @@ int main()
 
 			n++;
 		}
-		printf("¦³´X´Ê¾ð? %d\n", n);
+		printf("Â¦Â³Â´XÂ´ÃŠÂ¾Ã°? %d\n", n);
 
 		qsort(tree, n, 32, compare);
 
