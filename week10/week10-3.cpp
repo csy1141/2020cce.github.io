@@ -15,7 +15,7 @@ int main()
 
 			n++;
 		}
-		printf("¦³´X´Ê¾ð? %d\n", n);
+		printf("Â¦Â³Â´XÂ´ÃŠÂ¾Ã°? %d\n", n);
 		printf("=============\n");
 
 		for(int j=0; j<n; j++){
