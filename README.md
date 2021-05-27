@@ -1,9 +1,8 @@
 # 2020cce.github.io
 上課程式碼
 
-###week01
-
-## 1
+### week01
+## week01-1
 ```C
 #include <stdio.h>
 int main()
@@ -13,7 +12,7 @@ int main()
 	printf("%d=50*%d+5*%d+1*%d\n", n, n/50, (n%50)/5, n%5);
 }
 ```
-## 2
+## week01-2
 ```C
 #include <stdio.h>
 int main()
@@ -28,7 +27,7 @@ int main()
 		
 }
 ```
-## 3
+## week01-3
 ```C
 #include <stdio.h>
 int main()
@@ -44,7 +43,7 @@ int main()
 
 }
 ```
-## 4
+## week01-4
 ```C
 #include <stdio.h>
 int main()
@@ -58,7 +57,7 @@ int main()
 
 }
 ```
-## 5
+## week01-5
 ```C
 #include <stdio.h>
 int main()
@@ -79,7 +78,44 @@ int main()
 
 
 ```
-##week02-3
+### week02
+
+## week02-1
+```C
+#include <stdio.h>
+int main()
+{
+    int n1=10, n2=20, n3=30;
+    printf("n1:%d n2:%d n3:%d\n", n1, n2, n3);
+    int *p=&n1;
+    *p=200;
+    printf("n1:%d n2:%d n3:%d\n", n1, n2, n3);
+
+
+}
+```
+## week02-2
+```C
+#include <stdio.h>
+int main()
+{
+    int n[3]={10,20,30};
+    printf("n[0]:%d n[1]:%d n[2]:%d\n", n[0], n[1], n[2]);
+    int *p=&n[0];
+    *p=200;
+    printf("n[0]:%d n[1]:%d n[2]:%d\n", n[0], n[1], n[2]);
+    int *p=&n2[2];
+    *p2=300;
+    printf("n[0]:%d n[1]:%d n[2]:%d\n", n[0], n[1], n[2]);
+    p2=p;
+    *p2=400;
+    printf("n[0]:%d n[1]:%d n[2]:%d\n", n[0], n[1], n[2]);
+
+
+}
+```
+
+## week02-3
 ```C
 #include <stdio.h>
 int main()
@@ -100,3 +136,7 @@ int main()
     printf("n[0]:%d n[1]:%d n[2]:%d\n", n[0], n[1], n[2]);
 }
 ```
+
+### week03
+
+## week03-
