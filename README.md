@@ -389,3 +389,225 @@ int main()
 
 }
 ```
+## week07
+```C
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+char line[100][10];
+char temp[10];
+
+int compare(const void*p1, const void*p2)
+{
+	char*s1=(char*)p1;
+	char*s2=(char*)p2;
+	return strcmp (s1, s2);
+}
+
+int main()
+{
+	int n;
+	scanf("%d", &n);
+
+	for(int i=0; i<n; i++){
+		scanf("%s", line[i]);
+	}
+
+	qsort(line, n, 10, compare);
+
+	for(int i=0; i<n; i++){
+		printf("%s\n", line[i]);
+	}
+}
+```
+## week10
+### week10-1
+```C
+#include <stdio.h>
+#include <string.h>
+char line[1000];
+int main()
+{
+	int t;
+	scanf("%d\n\n", &t);
+
+	for(int i=0; i<t; i++){
+		int n=0;
+		while(gets(line)!=NULL){
+			if(strcmp(line, "")==0)break;
+			printf("%s\n", line);
+		}
+		printf("==========\n");
+	}
+}
+```
+### week10-2
+```C
+#include <stdio.h>
+#include <string.h>
+char line[1000];
+int main()
+{
+	int t;
+	scanf("%d\n\n", &t);
+
+	for(int i=0; i<t; i++){
+		int n=0;
+		while(gets(line)!=NULL){
+			if(strcmp(line, "")==0)break;
+			n++;
+		}
+		printf("¦³´X´Ê¾ð? %d\n", n);
+		printf("=============\n");
+	}
+}
+```
+### week10-3
+```C
+#include <stdio.h>
+#include <string.h>
+char line[1000];
+char tree[1000000][32];
+int main()
+{
+	int t;
+	scanf("%d\n\n", &t);
+
+	for(int i=0; i<t; i++){
+		int n=0;
+		while(gets(line)!=NULL){
+			if(strcmp(line, "")==0) break;
+			strcpy(tree[n], line);
+
+			n++;
+		}
+		printf("¦³´X´Ê¾ð? %d\n", n);
+		printf("=============\n");
+
+		for(int j=0; j<n; j++){
+			printf("%s\n", tree[j]);
+		}
+	}
+}
+```
+### week10-4
+```C
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+char line[1000];
+char tree[1000000][32];
+int compare(const void*p1, const void*p2){
+	return strcmp((char*)p1, (char*)p2);
+}
+int main()
+{
+	int t;
+	scanf("%d\n\n", &t);
+
+	for(int i=0; i<t; i++){
+		int n=0;
+		while(gets(line)!=NULL){
+			if(strcmp(line, "")==0) break;
+			strcpy(tree[n], line);
+
+			n++;
+		}
+		printf("¦³´X´Ê¾ð? %d\n", n);
+
+		qsort(tree, n, 32, compare);
+
+		for(int j=0; j<n; j++){
+			printf("%s\n", tree[j]);
+		}
+		printf("=============\n");
+	}
+}
+```
+### week10-5
+```C
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+char line[1000];
+char tree[1000000][32];
+int compare(const void*p1, const void*p2){
+	return strcmp((char*)p1, (char*)p2);
+}
+int main()
+{
+	int t;
+	scanf("%d\n\n", &t);
+
+	for(int i=0; i<t; i++){
+		int n=0;
+		while(gets(line)!=NULL){
+			if(strcmp(line, "")==0) break;
+
+			strcpy(tree[n], line);
+
+			n++;
+		}
+		qsort(tree, n, 32, compare);
+		int ans=1;
+		printf("%s ", tree[0]);
+
+		for(int j=0; j<n; j++){
+			if(strcmp(tree[j], tree[j+1])==0){
+				ans++;
+			}else{
+				printf("%d\n", ans);
+				ans=1;
+				printf("%s ", tree[j+1]);
+
+			}
+
+		}
+	}
+}
+```
+### week10-6
+```C
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+char line[1000];
+char tree[1000000][32];
+int compare(const void*p1, const void*p2){
+	return strcmp((char*)p1, (char*)p2);
+}
+int main()
+{
+	int t;
+	scanf("%d\n\n", &t);
+
+	for(int i=0; i<t; i++){
+		int n=0;
+		while(gets(line)!=NULL){
+			if(strcmp(line, "")==0) break;
+
+			strcpy(tree[n], line);
+
+			n++;
+		}
+		qsort(tree, n, 32, compare);
+
+		if(i>0) printf("\n");
+		int ans=1;
+		printf("%s ", tree[0]);
+
+		for(int j=0; j<n-1; j++){
+			if(strcmp(tree[j], tree[j+1])==0){
+				ans++;
+			}else{
+				printf("%.4f\n", 100*ans/(float)n);
+				ans=1;
+				printf("%s ", tree[j+1]);
+
+			}
+
+		}
+		printf("%.4f\n", 100*ans/(float)n);
+	}
+}
+```
