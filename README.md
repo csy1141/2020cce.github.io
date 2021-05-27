@@ -1,8 +1,8 @@
 # 2020cce.github.io
 上課程式碼
 
-### week01
-## week01-1
+## week01
+### week01-1
 ```C
 #include <stdio.h>
 int main()
@@ -12,7 +12,7 @@ int main()
 	printf("%d=50*%d+5*%d+1*%d\n", n, n/50, (n%50)/5, n%5);
 }
 ```
-## week01-2
+### week01-2
 ```C
 #include <stdio.h>
 int main()
@@ -27,7 +27,7 @@ int main()
 		
 }
 ```
-## week01-3
+### week01-3
 ```C
 #include <stdio.h>
 int main()
@@ -43,7 +43,7 @@ int main()
 
 }
 ```
-## week01-4
+### week01-4
 ```C
 #include <stdio.h>
 int main()
@@ -57,7 +57,7 @@ int main()
 
 }
 ```
-## week01-5
+### week01-5
 ```C
 #include <stdio.h>
 int main()
@@ -78,9 +78,9 @@ int main()
 
 
 ```
-### week02
+## week02
 
-## week02-1
+### week02-1
 ```C
 #include <stdio.h>
 int main()
@@ -94,7 +94,7 @@ int main()
 
 }
 ```
-## week02-2
+### week02-2
 ```C
 #include <stdio.h>
 int main()
@@ -115,7 +115,7 @@ int main()
 }
 ```
 
-## week02-3
+### week02-3
 ```C
 #include <stdio.h>
 int main()
@@ -137,6 +137,97 @@ int main()
 }
 ```
 
-### week03
+## week03
 
-## week03-
+### week03-1
+```C
+#include <stdio.h>
+int main()
+{
+    int a[5]={0, 10, 20, 30, 40};
+    int *p= &a[2];
+    *p=222;
+
+    p=p+2;
+    *p=666;
+}
+```
+
+### week03-2
+```C
+#include <stdio.h>
+int main()
+{
+    int a[5]={0, 10, 20, 30, 40};
+    for(int i=0; i<=4; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+    int *p= &a[2];
+    *p=222;
+    for(int i=0; i<=4; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+    p=p+2;
+    *p=666;
+    for(int i=0; i<=4; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+    p--;
+    *p=555;
+    for(int i=0; i<=4; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+}
+```
+
+### week03-3
+```C
+#include <stdio.h>
+int a[5]={0, 10, 20, 30, 40};
+void printfAll(){
+    for(int i=0; i<=4; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+}
+int main()
+{
+    printfAll();
+
+    int *p= &a[2];
+    *p=222;
+    printfAll();
+    printf("¶Ã½X:%d\n", p);
+
+    p=p+2;
+    *p=666;
+    printfAll();
+    printf("¶Ã½X:%d\n", p);
+
+    p--;
+    *p=555;
+    printfAll();
+    printf("¶Ã½X:%d\n", p);
+
+
+}
+```
+### week03-4
+```C
+#include <stdio.h>
+#include <stdlib.h>
+int a[10];
+int main()
+{
+    int b[10];
+    int*p=(int*) malloc( sizeof(int)*10);
+    return 0;
+}
+```
