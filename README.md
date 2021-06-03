@@ -1022,4 +1022,95 @@ void draw(){
 }
 ```
 
-
+## week14
+### week14-1
+```C
+void setup(){
+   size(300,200);
+   float ans=random(60);
+   textSize(30);
+   text(ans, 0, 30);
+}
+```
+### week14-2
+```C
+void setup(){
+  size(300,200);
+  textSize(30);
+}
+int ans=0;
+void draw(){//畫圖 每秒60次 60fps
+  background(#2C9CF0);
+  //int ans=(int)random(60);//強制轉型casting
+  text(ans, 30, 30);
+}
+void mousePressed(){//滑鼠按下去才做亂數
+  ans=(int)random(60); 
+}
+```
+### week14-3
+```C
+int []a={1,2,3,4,5,6,7,8,9,10};
+void setup(){
+  size(400,200);
+  textSize(30);
+}
+void draw(){
+  background(#2C9CF0);
+  for(int i=0; i<10; i++){
+    text(a[i], i*40, 100); 
+  }
+}
+void mousePressed(){
+  int i1=(int) random(10);
+  int i2=(int) random(10);
+  int temp=a[i1]; a[i1]=a[i2]; a[i2]=temp;
+}//交換 行數太擠 所以塞成一行 中間是分號
+```
+### week14-4
+```C
+int []a=new int[49];
+void setup(){
+  size(400,200);
+  textSize(30);
+  for(int i=0; i<49; i++) a[i]=i+1; 
+}
+void draw(){
+  background(#2C9Cf0);
+  for(int i=0; i<6; i++){//49只秀6個數
+    text(a[i], i*50, 100); 
+  }//49球挑6球
+}
+void mousePressed(){
+  for(int i=0; i<10000; i++){
+    int i1=(int)random(49), i2=(int)random(49);
+    int temp=a[i1]; a[i1]=a[i2]; a[i2]=temp;
+  }
+}
+```
+### week14-5
+```C
+int []a=new int[49];
+void setup(){
+  size(400,200);
+  textSize(30);
+  for(int i=0; i<49; i++) a[i]=i+1;
+  for(int i=0; i<10000; i++){
+    int i1=(int)random(49), i2=(int)random(49);
+    int temp=a[i1]; a[i1]=a[i2]; a[i2]=temp;
+  }
+}
+int N=0;
+void draw(){
+  background(#2C9Cf0);
+  for(int i=0; i<N; i++){//49只秀6個數
+    fill(255); ellipse(50+i*50, 100, 40, 40);
+    textAlign(CENTER, CENTER);//文字對齊
+    fill(0);
+    text(a[i], 50+i*50, 100); 
+  }//49球挑6球
+}
+void mousePressed(){
+  N++;
+}
+```
