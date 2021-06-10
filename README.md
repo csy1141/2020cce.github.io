@@ -1114,3 +1114,85 @@ void mousePressed(){
   N++;
 }
 ```
+
+## week15
+### week15-1
+```C
+void setup(){
+  size(400, 200); 
+  textSize(40);
+}
+void draw(){//畫圖 每秒60次
+  background(41, 199, 207);
+  int s=second();//秒
+  text(s, 100, 100);
+}
+```
+### week15-2
+```C
+void setup(){
+  size(400, 200); 
+  textSize(40);
+}
+void draw(){//畫圖 每秒60次
+  background(41, 199, 207);
+  int s=second();//秒
+  //text(59-s, 100, 100);
+  text(9-s%10, 100, 100);
+}
+//原   0,1,2,3,4...
+//倒數 9,8,7,6,5...
+```
+### week15-3
+```C
+import processing.sound.*;
+SoundFile player;//SoundFile型狀 player變名
+
+void setup(){
+  size(400, 200);
+  player=new SoundFile(this, "tada.mp3");
+}
+void draw(){
+  background(51,114,191);
+}
+void mousePressed(){
+  player.play();
+}
+```
+### week15-4
+```C
+import processing.sound.*;
+SoundFile player;
+void setup(){
+  size(400, 200);
+  textSize(40);
+  player=new SoundFile(this, "tada.mp3");
+}
+void draw(){//畫圖 每秒60次
+  background(41, 199, 207);
+  int s=second();//秒
+  //text(59-s, 100, 100);
+  text(9-s%10, 100, 100);
+  if(9-s%10==0)player.play();
+}
+```
+### week15-5
+```C
+import processing.sound.*;
+SoundFile player;
+void setup(){
+  size(400, 200);
+  textSize(40);
+  player=new SoundFile(this, "bell.mp3");
+}
+void draw(){//畫圖 每秒60次
+  background(41, 199, 207);
+}
+void mousePressed(){
+  if(player.isPlaying()){
+    player.stop();
+  }else{
+    player.play();
+  }
+}
+```
