@@ -1324,8 +1324,8 @@ void draw(){
  text(v,200,150);//印轉動速度
 }
 ```
-## week16
-### week16-1
+## week17
+### week17-1
 ```C
 void setup(){
  size(400,200);
@@ -1338,7 +1338,7 @@ void draw(){
  text(line,100,150);
 }
 ```
-### week16-2
+### week17-2
 ```C
 void setup(){
  size(400,200);
@@ -1356,7 +1356,7 @@ void mousePressed(){
 }
 ```
 
-### week16-3
+### week17-3
 ```C
 void setup(){
 size(400,200);
@@ -1374,7 +1374,7 @@ void keyPressed(){
 }
 ```
 
-### week16-4
+### week17-4
 ```C
 void setup(){
 size(400,200);
@@ -1396,7 +1396,7 @@ void keyPressed(){
 }
 ```
 
-### week16-5
+### week17-5
 ```C
 void setup(){
 size(400,200);
@@ -1419,7 +1419,7 @@ void keyPressed(){
 }
 ```
 
-### week16-6
+### week17-6
 ```C
 void setup(){
 size(400,200);
@@ -1447,7 +1447,7 @@ void keyPressed(){
 }
 ```
 
-### week16-7
+### week17-7
 ```C
 void setup(){
 size(400,200);
